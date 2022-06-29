@@ -1,0 +1,16 @@
+{application, webrtp,
+ [{description, "Simple web softphone application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {webrtp_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    nksip
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.

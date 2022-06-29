@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+  webrtp:
+    build:
+      context: .
+      args:
+        ip: '192.168.2.36'
+    stdin_open: true
+    tty: true
+    container_name: webrtp-dev
+    volumes:
+      - ./src:/app/src
+      - ./priv:/app/priv
+    ports:
+      - "8080:8080/tcp"
