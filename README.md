@@ -1,7 +1,7 @@
 ## What is it?
 
 WebRTP is a web application for sending audio messages to clients of the local telephone network on Asterisk. <br>
-On the Asterisk server, 6 users are allocated: 1 server user (this application will connect to it) and 5 client users. <br>
+On the Asterisk server, 6 users are allocated: 1 server user - <1000> (this application will connect to it) and 5 client users <1001-1005>. <br>
 You can read more about how the Asterisk server works in the description of the server image that you need to install - https://hub.docker.com/repository/docker/dannmaj/pbx
 
 ## How does it work?
@@ -29,3 +29,7 @@ Also, if you want to try something change - you can start WebRTP in dev mode wit
 $ docker-compose -f dev.yaml -p webrtp-dev up -d
 ```
 The tests were carried out using Erlang 21.3 placed in a Docker container (GNU/Linux Alpine), Google Chrome browser and Asterisk 11.
+
+## Important stuff
+* When testing receiving audio messages as a SIP client Zoiper 5 due to fine tuning of audio codecs
+* It is not recommended to use login 1000 for the client, because he is busy with the server
