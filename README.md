@@ -28,6 +28,11 @@ Also, if you want to try something change - you can start WebRTP in dev mode wit
 ```
 $ docker-compose -f dev.yaml -p webrtp-dev up -d
 ```
+## Executables
+If there is a problem with the architecture or if there is a need to recompile the voice_client executable, then run the following commands from the application directory (/app) in the docker container:
+```
+$ cd c_src && make && cd ..
+```
 The tests were carried out using Erlang 21.3 placed in a Docker container (GNU/Linux Alpine), Google Chrome browser and Asterisk 11.
 
 ## Important stuff
