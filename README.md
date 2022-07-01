@@ -9,7 +9,8 @@ You can read more about how the Asterisk server works in the description of the 
 On startup, the web server starts running at a local address (localhost:8080 by default). <br>
 The website is an HTML page with a two-field form: a drop-down list of prospective clients and a text to translate into audio. <br>
 After submitting the form to the server, an attempt is made to establish a connection and make invite (SIP INVITE). <br>
-When user answers the call, he receives a message synthesized by the Yandex SpeechKit service (the message has a character limit of 255 units)
+When user answers the call, he receives a message synthesized by the Yandex SpeechKit service. <br>
+<!> **The message has a character limit of 255 units for English and 20 units for Russian** <!>
 ## What do you need to start
 * Docker
 * Git
@@ -21,8 +22,8 @@ To start, you need to:
 * Run the following commands:
 
 ```
-$ docker run -t -i -p "5060:5060/udp" -p "5060:5060/tcp" -p "10000-10010:10000-10010/udp" --name asterisk dannmaj/pbx:release
-$ docker-compose -f release.yaml -p webrtp-release up -d
+$ docker run -t -i -p "5060:5060/udp" -p "5060:5060/tcp" -p "10000-10010:10000-10010/udp" --name asterisk dannmaj/pbx:release -d
+$ docker-compose -f release.yaml -p webrtp up -d
 ```
 Also, if you want to try something change - you can start WebRTP in dev mode with command:
 ```
