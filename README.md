@@ -5,8 +5,8 @@ On the Asterisk server, 6 users are allocated: 1 server user - <1000> (this appl
 You can read more about how the Asterisk server works in the description of the server image that you need to install - https://hub.docker.com/repository/docker/dannmaj/pbx
 
 <details>
-  <summary>WebRTP demo</summary>
-  https://user-images.githubusercontent.com/17549957/176882933-615e1afa-cbba-47c0-a141-1685f5170aea.mp4
+  <summary>Demonstration</summary>
+  <video src='https://user-images.githubusercontent.com/17549957/176882933-615e1afa-cbba-47c0-a141-1685f5170aea.mp4' width=180/>
 </details>
 
 ## How does it work?
