@@ -4,6 +4,11 @@ WebRTP is a web application for sending audio messages to clients of the local t
 On the Asterisk server, 6 users are allocated: 1 server user - <1000> (this application will connect to it) and 5 client users <1001-1005>. <br>
 You can read more about how the Asterisk server works in the description of the server image that you need to install - https://hub.docker.com/repository/docker/dannmaj/pbx
 
+<details>
+  <summary>WebRTP demo</summary>
+  https://user-images.githubusercontent.com/17549957/176882933-615e1afa-cbba-47c0-a141-1685f5170aea.mp4
+</details>
+
 ## How does it work?
 
 On startup, the web server starts running at a local address (localhost:8080 by default). <br>
